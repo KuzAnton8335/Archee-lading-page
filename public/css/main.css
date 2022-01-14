@@ -1,0 +1,420 @@
+@font-face {
+  font-family: "Cabinet Grotesk";
+  font-weight: 700;
+  font-style: normal;
+  src: url("/font/CabinetGrotesk/CabinetGrotesk-Bold.eot");
+  src: local("Cabinet Grotesk"), url("/font/CabinetGrotesk/CabinetGrotesk-Bold.eot?#iefix") format("embedded-opentype"), url("/font/CabinetGrotesk/CabinetGrotesk-Bold.woff2") format("woff2"), url("/font/CabinetGrotesk/CabinetGrotesk-Bold.woff") format("woff"), url("/font/CabinetGrotesk/CabinetGrotesk-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Cabinet Grotesk";
+  font-weight: 900;
+  font-style: normal;
+  src: url("/font/CabinetGrotesk/CabinetGrotesk-Black.eot");
+  src: local("Cabinet Grotesk"), url("/font/CabinetGrotesk/CabinetGrotesk-Black.eot?#iefix") format("embedded-opentype"), url("/font/CabinetGrotesk/CabinetGrotesk-Black.woff2") format("woff2"), url("/font/CabinetGrotesk/CabinetGrotesk-Black.woff") format("woff"), url("/font/CabinetGrotesk/CabinetGrotesk-Black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Helvetica Now Display";
+  font-weight: 400;
+  font-style: normal;
+  src: url("/font/HelveticaNowDisplay/HelveticaNowDisplay-Regular.eot");
+  src: local("Helvetica Now Display"), url("/font/HelveticaNowDisplay/HelveticaNowDisplay-Regular.eot?#iefix") format("embedded-opentype"), url("/font/HelveticaNowDisplay/HelveticaNowDisplay-Regular.woff2") format("woff2"), url("/font/HelveticaNowDisplay/HelveticaNowDisplay-Regular.woff") format("woff"), url("/font/HelveticaNowDisplay/HelveticaNowDisplay-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Helvetica Now Display";
+  font-weight: 500;
+  font-style: normal;
+  src: url("/font/HelveticaNowDisplay/HelveticaNowDisplay-Medium.eot");
+  src: local("Helvetica Now Display"), url("/font/HelveticaNowDisplay/HelveticaNowDisplay-Medium.eot?#iefix") format("embedded-opentype"), url("/font/HelveticaNowDisplay/HelveticaNowDisplay-Medium.woff2") format("woff2"), url("/font/HelveticaNowDisplay/HelveticaNowDisplay-Medium.woff") format("woff"), url("/font/HelveticaNowDisplay/HelveticaNowDisplay-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Helvetica Now Display";
+  font-weight: 700;
+  font-style: normal;
+  src: url("/font/HelveticaNowDisplay/HelveticaNowDisplay-Bold.eot");
+  src: local("Helvetica Now Display"), url("/font/HelveticaNowDisplay/HelveticaNowDisplay-Bold.eot?#iefix") format("embedded-opentype"), url("/font/HelveticaNowDisplay/HelveticaNowDisplay-Bold.woff2") format("woff2"), url("/font/HelveticaNowDisplay/HelveticaNowDisplay-Bold.woff") format("woff"), url("/font/HelveticaNowDisplay/HelveticaNowDisplay-Bold.ttf") format("truetype");
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: #f7f7f7;
+  font-family: "Helvetica Now Display";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.vhidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  max-width: 1440px;
+  min-width: 280px;
+  min-height: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
+  background-color: #fff;
+  color: #61594d;
+}
+
+.container {
+  max-width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-top: 33px;
+  margin-bottom: 16.22px;
+  background-color: #f7f7f7;
+}
+
+.header-container {
+  max-width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.header__logo-link {
+  display: inline-block;
+  margin-top: 2px;
+}
+
+.nav-menu {
+  padding-left: 297px;
+  padding-right: 224px;
+}
+
+.header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header__list-item {
+  padding-right: 30px;
+}
+
+.header__list-item:last-child {
+  padding-right: 0px;
+}
+
+.header__list .header__link {
+  text-decoration: none;
+  border: 0;
+  color: inherit;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #2c2321;
+}
+
+.header__button-btn {
+  text-decoration: none;
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  margin-right: 30.5px;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #2c2321;
+}
+
+.header__contact-link {
+  text-decoration: none;
+  border: 0;
+  color: inherit;
+  font-family: inherit;
+  color: #fff;
+  background-color: #d6680f;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 10px 30px;
+}
+
+.hero {
+  margin-left: 26px;
+  background-color: #f7f7f7;
+}
+
+.hero-container {
+  margin: 0 auto;
+}
+
+.hero__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hero__title {
+  margin: 0;
+  max-width: 889px;
+  min-height: 355px;
+  font-family: "Cabinet Grotesk", sans-serif;
+  font-weight: 900;
+  font-size: 62px;
+  line-height: 77px;
+  color: #2c2321;
+  background-image: url("../img/star-combo-4.svg");
+  background-repeat: no-repeat;
+  background-size: 249px 220px;
+  background-position-y: 3px;
+  background-position-x: 233px;
+  padding-top: 125px;
+  padding-left: 356px;
+}
+
+.hero__text {
+  max-width: 888px;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  color: #61594d;
+  padding-left: 356px;
+  padding-bottom: 34px;
+}
+
+.hero__link {
+  text-decoration: none;
+  border: 0;
+  color: inherit;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 22px 40px;
+  color: #fff;
+  background-color: #d6680f;
+  border-radius: 6px;
+  margin-left: 356px;
+}
+
+.hero__wrapper-banner {
+  margin: 0;
+  width: 838px;
+  height: 600px;
+  background-image: url("../img/3D-modern-house.png");
+  background-repeat: no-repeat;
+  background-position-y: 124px;
+  background-position-x: -80px;
+  background-size: 838px 600px;
+}
+
+.hero__raiting {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hero__raiting-text {
+  font-family: "Cabinet Grotesk", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  color: #2c2321;
+  padding-right: 10px;
+  padding-bottom: 5px;
+}
+
+.hero__raiting-btn {
+  text-decoration: none;
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  padding-right: 5px;
+}
+
+.hero__raiting-number {
+  font-family: "Cabinet Grotesk", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 22px;
+  color: #2c2321;
+}
+
+.hero__avatars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 31px;
+  padding-left: 356px;
+}
+
+.hero__avatars-subtitle {
+  display: inline-block;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #61594d;
+}
+
+.hero__avatars-bloks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 17px;
+}
+
+.hero__avatars-bloks .avatars__bloks-link {
+  display: block;
+  text-decoration: none;
+  border: 0;
+  color: inherit;
+  font-family: inherit;
+  width: 48px;
+  height: 48px;
+  border: 1.5px solid #ffffff;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.hero__avatar {
+  padding-right: 641px;
+}
+
+.avatars__bloks-link {
+  margin-right: -10px;
+}
+
+.img__avatar-one {
+  background-image: url("../img/mini-avatars/avatars-img_1.png");
+}
+
+.img__avatar-two {
+  background-image: url("../img/mini-avatars/avatars-img_2.png");
+}
+
+.img__avatar-three {
+  background-image: url("../img/mini-avatars/avatars-img_3.png");
+}
+
+.img__avatar-four {
+  background-image: url("../img/mini-avatars/avatars-img_4.png");
+}
+
+.img__avatar-five {
+  text-decoration: none;
+  border: 0;
+  color: inherit;
+  font-family: inherit;
+  color: #fff;
+  background-color: #d6680f;
+  border: 1.5px solid #ffffff;
+  padding: 16px 11px;
+  border-radius: 50%;
+  font-family: "Cabinet Grotesk", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  text-align: center;
+}
+
+.hero__phone-link {
+  text-decoration: none;
+  border: 0;
+  color: inherit;
+  font-family: inherit;
+  display: inline-block;
+  font-family: "Cabinet Grotesk", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  -webkit-text-decoration-line: underline;
+  text-decoration-line: underline;
+  color: #d6680f;
+  padding-top: 52px;
+}
+
+.hero__phone-text {
+  display: block;
+  margin: 0;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #61594d;
+  margin-top: 10px;
+}
+
+@supports (-webkit-appearance:none) {
+  .hero__title {
+    background-image: url("../img/star-combo-4.svg");
+  }
+
+  .hero__wrapper-banner {
+    background-image: url("../img/3D-modern-house.webp");
+  }
+
+  .img__avatar-one {
+    background-image: url("../img/mini-avatars/avatars-img_1.webp");
+  }
+
+  .img__avatar-two {
+    background-image: url("../img/mini-avatars/avatars-img_2.webp");
+  }
+
+  .img__avatar-three {
+    background-image: url("../img/mini-avatars/avatars-img_3.webp");
+  }
+
+  .img__avatar-four {
+    background-image: url("../img/mini-avatars/avatars-img_4.webp");
+  }
+}

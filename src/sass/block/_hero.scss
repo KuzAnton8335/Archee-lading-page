@@ -1,0 +1,183 @@
+.hero {
+	margin-left: 26px;
+	background-color: #f7f7f7;
+}
+.hero-container {
+	// max-width: 1414px;
+	margin: 0 auto;
+}
+
+// .hero__wrapper-info {
+// 	padding-left: 124px;
+// }
+
+.hero__info {
+	display: flex;
+}
+
+.hero__title {
+	margin: 0;
+	max-width: 889px;
+	min-height: 355px;
+	font-family: "Cabinet Grotesk", sans-serif;
+	font-weight: 900;
+	font-size: 62px;
+	line-height: 77px;
+	color: $color-dark-font;
+	background-image: url("../img/star-combo-4.svg");
+	background-repeat: no-repeat;
+	background-size: 249px 220px;
+	background-position-y: 3px;
+	background-position-x: 233px;
+	padding-top: 125px;
+	padding-left: 356px;
+}
+
+.hero__text {
+	max-width: 888px;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 30px;
+	color: $color-text-base;
+	padding-left: 356px;
+	padding-bottom: 34px;
+}
+
+.hero__link {
+	@include reset-link;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 20px;
+	padding: 22px 40px;
+	color: $color-bg-base;
+	background-color: $color-link;
+	border-radius: 6px;
+	margin-left: 356px;
+}
+.hero__wrapper-banner {
+	margin: 0;
+	width: 838px;
+	height: 600px;
+	background-image: url("../img/3D-modern-house.png");
+	background-repeat: no-repeat;
+	background-position-y: 124px;
+	background-position-x: -80px;
+	background-size: 838px 600px;
+}
+
+.hero__raiting {
+	display: flex;
+	&-text {
+		font-family: "Cabinet Grotesk", sans-serif;
+		font-weight: bold;
+		font-size: 20px;
+		line-height: 22px;
+		letter-spacing: 0.02em;
+		color: $color-dark-font;
+		padding-right: 10px;
+		padding-bottom: 5px;
+	}
+
+	&-btn {
+		@include reset-button;
+		padding-right: 5px;
+	}
+
+	&-number {
+		font-family: "Cabinet Grotesk", sans-serif;
+		font-weight: bold;
+		font-size: 20px;
+		line-height: 22px;
+		color: $color-dark-font;
+	}
+}
+
+.hero__avatars {
+	display: flex;
+	align-items: center;
+	padding-top: 31px;
+	padding-left: 356px;
+	&-subtitle {
+		display: inline-block;
+		line-height: 24px;
+		letter-spacing: 0.02em;
+		color: $color-text-base;
+	}
+
+	&-bloks {
+		display: flex;
+		padding-top: 17px;
+		.avatars__bloks-link {
+			display: block;
+			@include reset-link;
+			width: 48px;
+			height: 48px;
+			border: 1.5px solid #ffffff;
+			border-radius: 50%;
+			background-size: cover;
+			background-position: center center;
+			background-repeat: no-repeat;
+		}
+	}
+}
+
+.hero__avatar {
+	padding-right: 641px;
+}
+
+.avatars__bloks-link {
+	margin-right: -10px;
+}
+.img__avatar-one {
+	background-image: url("../img/mini-avatars/avatars-img_1.png");
+}
+
+.img__avatar-two {
+	background-image: url("../img/mini-avatars/avatars-img_2.png");
+}
+
+.img__avatar-three {
+	background-image: url("../img/mini-avatars/avatars-img_3.png");
+}
+
+.img__avatar-four {
+	background-image: url("../img/mini-avatars/avatars-img_4.png");
+}
+
+.img__avatar-five {
+	@include reset-link;
+	color: $color-bg-base;
+	background-color: $color-link;
+	border: 1.5px solid #ffffff;
+	padding: 16px 11px;
+	border-radius: 50%;
+	font-family: "Cabinet Grotesk", sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 16px;
+	letter-spacing: 0.02em;
+	color: #ffffff;
+	text-align: center;
+}
+
+.hero__phone-link {
+	@include reset-link;
+	display: inline-block;
+	font-family: "Cabinet Grotesk", sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 20px;
+	text-decoration-line: underline;
+	color: $color-link;
+	padding-top: 52px;
+}
+
+.hero__phone-text {
+	display: block;
+	margin: 0;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 18px;
+	color: $color-text-base;
+	margin-top: 10px;
+}
