@@ -1,0 +1,46 @@
+.products {
+	margin-top: 120px;
+	margin-bottom: 120px;
+	padding-left: 15px;
+}
+
+.products__list {
+	@include reset-list;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	&-item {
+		max-width: 291px;
+	}
+}
+
+.products-title {
+	font-family: "Cabinet Grotesk", sans-serif;
+	font-weight: 900;
+	font-size: 32px;
+	line-height: 0.7;
+	color: $color-dark-font;
+	margin-bottom: 0;
+	padding-bottom: 4px;
+}
+
+.products-text {
+	font-size: 16px;
+	line-height: 1.7;
+	color: $color-text-base;
+}
+
+.products-link {
+	display: inline-block;
+	font-family: "Cabinet Grotesk", sans-serif;
+	font-size: 16px;
+	line-height: 20px;
+	color: $color-text-base;
+	transition: 0.3s ease-in-out;
+	margin-top: 15px;
+}
+
+.products-link:hover {
+	color: $color-link;
+}

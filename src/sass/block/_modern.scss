@@ -1,0 +1,63 @@
+.modern {
+	min-height: 680px;
+	background-color: #fdfbf6;
+}
+
+.container-modern {
+	max-width: 1289px;
+}
+.modern-list {
+	display: flex;
+	align-items: center;
+	padding-top: 75px;
+}
+.modern-list__left {
+	width: 833px;
+	height: 531px;
+	background-image: url("../img/modern-house.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position-x: -82px;
+	background-position-y: -4px;
+}
+
+.modern-list__right {
+	max-width: 419px;
+	min-height: 440px;
+	margin-right: 52px;
+}
+
+.modern-title {
+	font-family: "Cabinet Grotesk", sans-serif;
+	font-weight: 900;
+	font-size: 48px;
+	line-height: 60px;
+	color: $color-dark-font;
+	margin: 0;
+}
+
+.modern-text {
+	line-height: 28px;
+	color: $color-text-base;
+	padding-bottom: 24px;
+}
+
+.modern-btn {
+	@include reset-button;
+	width: 172px;
+	height: 60px;
+	background-color: $color-link;
+	border-radius: 6px;
+	color: #fff;
+	font-family: "Cabinet Grotesk", sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 20px;
+	transition: 0.3s ease-in-out;
+}
+
+.modern-btn:hover {
+	background-color: #fff;
+	color: $color-link;
+	border: 2px solid $color-link;
+}

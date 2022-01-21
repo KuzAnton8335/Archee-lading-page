@@ -1,70 +1,73 @@
 .hero {
-	margin-left: 26px;
 	background-color: #f7f7f7;
+	padding-bottom: 140px;
 }
-.hero-container {
-	// max-width: 1414px;
-	margin: 0 auto;
-}
-
-// .hero__wrapper-info {
-// 	padding-left: 124px;
-// }
 
 .hero__info {
 	display: flex;
+	position: relative;
 }
 
-.hero__title {
+.hero__wrapper-title {
 	margin: 0;
-	max-width: 889px;
+	max-width: 748px;
 	min-height: 355px;
 	font-family: "Cabinet Grotesk", sans-serif;
 	font-weight: 900;
 	font-size: 62px;
 	line-height: 77px;
 	color: $color-dark-font;
-	background-image: url("../img/star-combo-4.svg");
-	background-repeat: no-repeat;
-	background-size: 249px 220px;
-	background-position-y: 3px;
-	background-position-x: 233px;
-	padding-top: 125px;
-	padding-left: 356px;
+	padding-top: 121px;
+	padding-left: 7px;
+}
+
+.hero__wrapper-ministar::after {
+	content: url("../img/star-combo-4.svg");
+	position: absolute;
+	left: 15px;
 }
 
 .hero__text {
-	max-width: 888px;
+	max-width: 452px;
 	font-weight: normal;
 	font-size: 18px;
 	line-height: 30px;
 	color: $color-text-base;
-	padding-left: 356px;
-	padding-bottom: 34px;
+	padding-left: 8px;
+	padding-bottom: 15px;
 }
 
 .hero__link {
-	@include reset-link;
+	width: 199px;
+	height: 60px;
+	@include reset-button;
 	font-weight: bold;
-	font-size: 16px;
-	line-height: 20px;
-	padding: 22px 40px;
+	line-height: 0.8;
+	font-size: 15px;
 	color: $color-bg-base;
 	background-color: $color-link;
 	border-radius: 6px;
-	margin-left: 356px;
+	margin-left: 7px;
+	transition: 0.3s ease-in-out;
+
+	&:hover {
+		background-color: #f7f7f7;
+		color: #d6680f;
+		border: 2px solid #d6680f;
+	}
 }
 .hero__wrapper-banner {
 	margin: 0;
-	width: 838px;
-	height: 600px;
-	background-image: url("../img/3D-modern-house.png");
-	background-repeat: no-repeat;
-	background-position-y: 124px;
-	background-position-x: -80px;
-	background-size: 838px 600px;
+	max-width: 838px;
+	min-height: 600px;
 }
 
+.hero__wrapper-banner::after {
+	content: url("../img/3D-modern-house.png");
+	position: absolute;
+	top: 121px;
+	left: 560px;
+}
 .hero__raiting {
 	display: flex;
 	&-text {
@@ -78,8 +81,7 @@
 		padding-bottom: 5px;
 	}
 
-	&-btn {
-		@include reset-button;
+	&-star {
 		padding-right: 5px;
 	}
 
@@ -95,11 +97,12 @@
 .hero__avatars {
 	display: flex;
 	align-items: center;
-	padding-top: 31px;
-	padding-left: 356px;
+	justify-content: space-between;
+	padding-top: 27px;
+	padding-left: 7px;
 	&-subtitle {
 		display: inline-block;
-		line-height: 24px;
+		line-height: 8px;
 		letter-spacing: 0.02em;
 		color: $color-text-base;
 	}
@@ -107,49 +110,28 @@
 	&-bloks {
 		display: flex;
 		padding-top: 17px;
-		.avatars__bloks-link {
-			display: block;
-			@include reset-link;
-			width: 48px;
-			height: 48px;
-			border: 1.5px solid #ffffff;
-			border-radius: 50%;
-			background-size: cover;
-			background-position: center center;
-			background-repeat: no-repeat;
-		}
 	}
 }
 
-.hero__avatar {
-	padding-right: 641px;
+.hero__avatars-list {
+	@include reset-list;
+	display: flex;
 }
-
-.avatars__bloks-link {
+.hero__avatars-item img {
+	display: block;
+	width: 48px;
+	height: 48px;
+	border: 1.5px solid #ffffff;
+	border-radius: 50%;
+}
+.hero__avatars-item {
 	margin-right: -10px;
 }
-.img__avatar-one {
-	background-image: url("../img/mini-avatars/avatars-img_1.png");
-}
 
-.img__avatar-two {
-	background-image: url("../img/mini-avatars/avatars-img_2.png");
-}
-
-.img__avatar-three {
-	background-image: url("../img/mini-avatars/avatars-img_3.png");
-}
-
-.img__avatar-four {
-	background-image: url("../img/mini-avatars/avatars-img_4.png");
-}
-
-.img__avatar-five {
-	@include reset-link;
+.hero__avatars-last {
 	color: $color-bg-base;
 	background-color: $color-link;
-	border: 1.5px solid #ffffff;
-	padding: 16px 11px;
+	padding: 16px 16px;
 	border-radius: 50%;
 	font-family: "Cabinet Grotesk", sans-serif;
 	font-weight: bold;
@@ -160,6 +142,9 @@
 	text-align: center;
 }
 
+.hero__phone {
+	margin-right: -8px;
+}
 .hero__phone-link {
 	@include reset-link;
 	display: inline-block;
@@ -174,6 +159,7 @@
 
 .hero__phone-text {
 	display: block;
+	max-width: 249px;
 	margin: 0;
 	font-weight: 500;
 	font-size: 12px;
