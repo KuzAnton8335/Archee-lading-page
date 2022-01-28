@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // Настройки
 @import "_config/variables";
 @import "_config/fonts";
@@ -7,7 +9,6 @@
 @import "_mixins/media";
 @import "_mixins/container";
 @import "_mixins/flex";
-
 
 *,
 *::before,

@@ -27,3 +27,10 @@
   padding: 0;
   cursor: pointer;
 }
+
+// сброс input
+@mixin reset-input {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}

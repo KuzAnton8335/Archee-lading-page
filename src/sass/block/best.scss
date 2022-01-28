@@ -1,0 +1,46 @@
+.best-list {
+	@include reset-list;
+	display: flex;
+	&__left {
+		display: block;
+		margin-right: 45px;
+	}
+}
+
+.best-info__bloks {
+	display: flex;
+	max-width: 300px;
+	padding-top: 50px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #61594d;
+	&-descr {
+		@include font-helvetica-bold;
+		@include font(14px, 28px);
+		color: $color-text-base;
+	}
+
+	&-icon {
+		width: 6px;
+		height: 6px;
+		background-image: url("../img/dot.svg");
+		background-repeat: no-repeat;
+		background-position-x: center;
+		margin-top: 11px;
+		padding-left: 13px;
+		padding-right: 10px;
+	}
+}
+
+.best-title {
+	max-width: 479px;
+	@include font-cabinet-black;
+	@include font(32px, 40px);
+	color: $color-dark-font;
+}
+
+.best-text {
+	max-width: 458px;
+	@include font-helvetica-regular;
+	@include font(16px, 28px);
+	color: $color-dark-font;
+}

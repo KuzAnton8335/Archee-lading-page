@@ -1,8 +1,16 @@
 .hero {
 	background-color: #f7f7f7;
-	padding-bottom: 140px;
+	padding-bottom: 172px;
 }
 
+.hero__wrapper {
+	position: relative;
+	&::before {
+		content: url("../img/star-combo-4.svg");
+		position: absolute;
+		left: -118px;
+	}
+}
 .hero__info {
 	display: flex;
 	position: relative;
@@ -14,24 +22,16 @@
 	min-height: 355px;
 	font-family: "Cabinet Grotesk", sans-serif;
 	font-weight: 900;
-	font-size: 62px;
-	line-height: 77px;
+	@include font(62px, 77px);
 	color: $color-dark-font;
 	padding-top: 121px;
 	padding-left: 7px;
 }
 
-.hero__wrapper-ministar::after {
-	content: url("../img/star-combo-4.svg");
-	position: absolute;
-	left: 15px;
-}
-
 .hero__text {
 	max-width: 452px;
 	font-weight: normal;
-	font-size: 18px;
-	line-height: 30px;
+	@include font(18px, 30px);
 	color: $color-text-base;
 	padding-left: 8px;
 	padding-bottom: 15px;
@@ -73,8 +73,7 @@
 	&-text {
 		font-family: "Cabinet Grotesk", sans-serif;
 		font-weight: bold;
-		font-size: 20px;
-		line-height: 22px;
+		@include font(20px, 22px);
 		letter-spacing: 0.02em;
 		color: $color-dark-font;
 		padding-right: 10px;
@@ -88,8 +87,7 @@
 	&-number {
 		font-family: "Cabinet Grotesk", sans-serif;
 		font-weight: bold;
-		font-size: 20px;
-		line-height: 22px;
+		@include font(20px, 22px);
 		color: $color-dark-font;
 	}
 }
@@ -162,8 +160,7 @@
 	max-width: 249px;
 	margin: 0;
 	font-weight: 500;
-	font-size: 12px;
-	line-height: 18px;
+	@include font(12px, 18px);
 	color: $color-text-base;
 	margin-top: 10px;
 }

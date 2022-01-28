@@ -1,84 +1,71 @@
-.top-form {
-	@include flex-center;
-	max-width: 1125px;
-	height: 210px;
-	margin: 0 auto;
-	box-shadow: 30px 50px 150px rgba(39, 31, 26, 0.2);
-	border-radius: 10px;
-	background-color: #fff;
-	margin-top: -72px;
+.search {
+	&__block {
+		background-color: #fff;
+		box-shadow: 30px 50px 150px rgba(39, 31, 26, 0.2);
+		border-radius: 10px;
+		padding: 50px;
+		margin-left: 8px;
+	}
+
+	&__title {
+		@include reset-model;
+		@include font-cabinet-bold;
+		@include font(24px, 30px);
+		color: $color-dark-font;
+		margin-bottom: 20px;
+	}
 }
 
-.top__form {
-	max-width: 1080px;
-	min-height: 80px;
-	padding-top: 15px;
-	padding-left: 23px;
-	position: relative;
-
-	&-input {
-		width: 271px;
-		height: 60px;
-		background: #f5f5f5;
-		border: none;
+.search-form {
+	display: flex;
+	&__field {
+		@include reset-input;
+		@include font-helvetica-medium;
+		@include font(16px, 24px);
+		background-color: #f5f5f5;
 		border-radius: 6px;
-		padding-left: 20px;
-		padding-right: 20px;
-		margin-right: 20px;
 		background-repeat: no-repeat;
-		outline: none;
-	}
+		background-position: center right 22px;
+		padding: 18px 62px 18px 20px;
+		margin-right: 20px;
+		flex-grow: 1;
 
-	&-input::placeholder {
-		font-size: 16px;
-		font-weight: 500;
-		line-height: 1;
-		color: rgba(97, 89, 77, 0.6);
+		&-location {
+			background-image: url("../img/location-icon.svg");
+		}
+
+		&-type {
+			background-image: url("../img/home-icon.svg");
+		}
+
+		&-budget {
+			background-image: url("../img/dollar-icon.svg");
+		}
+
+		&::placeholder {
+			color: rgba(97, 89, 77, 0.6);
+		}
+
+		&:focus {
+			outline: 1px solid #ddd;
+		}
 	}
 }
 
-.top-form__title {
-	margin: 0;
-	font-family: "Cabinet Grotesk", sans-serif;
-	font-weight: bold;
-	font-size: 24px;
-	color: $color-dark-font;
-	padding-left: 22px;
-}
-
-.btn__search {
+.btn_search {
 	@include reset-button;
+	@include font-cabinet-bold;
+	@include font(16px, 20px);
+	background-color: $color-link;
+	border-radius: 6px;
 	width: 166px;
 	height: 60px;
-	background-color: $color-link;
-	font-family: "Cabinet Grotesk", sans-serif;
-	font-weight: bold;
-	font-size: 16px;
-	line-height: 0.8;
 	color: #fff;
-	border-radius: 6px;
 	transition: 0.3s ease-in-out;
-}
 
-.btn__search:hover {
-	background-color: #fff;
-	color: $color-link;
-	border: 2px solid $color-link;
-}
-.icon__1 {
-	background-image: url("../img/location-icon.svg");
-	background-position-x: 231px;
-	background-position-y: 20px;
-}
-
-.icon__2 {
-	background-image: url("../img/home-icon.svg");
-	background-position-x: 227px;
-	background-position-y: 20px;
-}
-
-.icon__3 {
-	background-image: url("../img/dollar-icon.svg");
-	background-position-x: 225px;
-	background-position-y: 20px;
+	&:hover {
+		background-color: #fff;
+		border: 1px solid #d6680f;
+		color: #d6680f;
+	}
 }

@@ -16,7 +16,7 @@
 
 .nav-menu {
 	padding-bottom: 7px;
-	margin-right: 7px;
+	margin-right: -77px;
 }
 .nav-menu__list {
 	@include flex-center-v;
@@ -30,8 +30,7 @@
 	.nav-menu__link {
 		@include reset-link;
 		font-weight: 500;
-		font-size: 14px;
-		line-height: 21px;
+		@include font(14px, 20px);
 		text-transform: uppercase;
 		color: $color-dark-font;
 		transition: 0.3s ease-in-out;
@@ -60,18 +59,17 @@
 .header__contact {
 	&-link {
 		@include reset-button;
+		@include font-cabinet-bold;
 		color: $color-bg-base;
 		background-color: #d6680f;
 		border-radius: 6px;
 		font-weight: bold;
-		font-size: 16px;
-		line-height: 20px;
+		@include font(16px, 20px);
 		width: 118px;
-		height: 38px;
+		height: 40px;
 		cursor: pointer;
 		transition: 0.3s ease-in-out;
 		margin-right: -9px;
-		padding-bottom: 4px;
 
 		&:hover {
 			background-color: #f7f7f7;
@@ -79,4 +77,47 @@
 			border: 2px solid #d6680f;
 		}
 	}
+}
+
+.leng {
+	@include reset-list;
+
+	&__link {
+		@include reset-link;
+		@include reset-link;
+		@include font-helvetica-medium;
+		@include font(14px, 21px);
+		color: $color-dark-font;
+		text-transform: uppercase;
+	}
+
+	&__item {
+		display: none;
+	}
+
+	&__item:first-child {
+		display: flex;
+		align-items: center;
+		&::after {
+			display: table;
+			content: "";
+			width: 12px;
+			height: 7px;
+			background: url("../img/mini-arrow.svg") no-repeat;
+			margin-left: 10px;
+		}
+	}
+
+	&:hover &__item {
+		display: flex;
+
+		&::after {
+			transform: rotate(180deg);
+		}
+	}
+}
+
+.header__leng {
+	display: block;
+	margin-right: 28px;
 }

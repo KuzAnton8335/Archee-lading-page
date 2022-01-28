@@ -1,0 +1,60 @@
+.selected {
+	padding-top: 115px;
+}
+
+.selected__title {
+	@include reset-model;
+	@include font-cabinet-black;
+	@include font(48px, 60px);
+	color: $color-dark-font;
+	padding-bottom: 50px;
+	padding-left: 7px;
+}
+
+.selected__list {
+	@include reset-list;
+	display: flex;
+	padding-bottom: 138px;
+
+	&-left {
+		max-width: 330px;
+		padding-top: 316px;
+	}
+}
+
+.list-title {
+	display: block;
+	@include reset-model;
+	@include font-cabinet-black;
+	font-weight: 900;
+	@include font(32px, 40px);
+	color: $color-dark-font;
+	padding-left: 7px;
+	padding-bottom: 10px;
+
+	&::before {
+		display: block;
+		content: url("../img/line-icon.svg");
+		margin-bottom: 10px;
+	}
+}
+
+.list-text {
+	@include reset-model;
+	@include font(16px, 28px);
+	color: $color-text-base;
+	padding-left: 7px;
+}
+
+.list-left__img img {
+	margin-left: 197px;
+}
+
+.list-revers {
+	flex-direction: row-reverse;
+}
+
+.list-right__padding {
+	padding-right: 103px;
+	padding-top: 4px;
+}
