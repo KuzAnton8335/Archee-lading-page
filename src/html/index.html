@@ -5,13 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Archee</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="css/main.min.css" />
 
     <link rel="icon" href="img/favicon/favicon.svg" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <link rel="manifest" href="manifest.json" />
-
-    <script src="/js/main.js"></script>
   </head>
 
   <body>
@@ -35,6 +37,9 @@
         <!-- selected -->
         @@include('./chunk/selected.html')
         <!-- /selected -->
+        <!-- slider -->
+        @@include('./chunk/slider.html')
+        <!-- /slider -->
         <!-- best -->
         @@include('./chunk/best.html')
         <!-- /best -->
@@ -44,4 +49,7 @@
       <!-- /footer -->
     </div>
   </body>
+
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="/js/main.js"></script>
 </html>
