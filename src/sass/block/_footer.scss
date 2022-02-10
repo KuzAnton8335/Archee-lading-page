@@ -3,16 +3,22 @@
 }
 
 .footer-wrapper {
-	padding-top: 40px;
+	padding-top: 25px;
 	display: flex;
 	justify-content: space-between;
-	background-image: url("../img/bigline-icon.svg");
+	border-top: 1px solid #61594d;
 	background-repeat: no-repeat;
 }
 
+.footer__logo-link {
+	@include reset-model;
+	padding-top: 13px;
+	padding-left: 2px;
+}
 .footer-list__address {
 	max-width: 170px;
-
+	padding: 0;
+	padding-left: 10px;
 	&-item {
 		@include reset-list;
 		@include font-helvetica-regular;
@@ -34,6 +40,7 @@
 
 .footer-list__menu {
 	max-width: 170px;
+	padding: 0;
 
 	&-item {
 		@include reset-list;
@@ -49,6 +56,7 @@
 
 .footer-list__social {
 	max-width: 170px;
+	padding: 0;
 	&-item {
 		@include reset-list;
 	}

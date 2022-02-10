@@ -1,16 +1,25 @@
+.best {
+	padding-top: 120px;
+
+	&__container {
+		padding: 0;
+	}
+}
 .best-list {
+	@include reset-model;
 	@include reset-list;
 	display: flex;
+	margin-left: 22px;
 	&__left {
 		display: block;
-		margin-right: 45px;
+		margin-right: 70px;
 	}
 }
 
 .best-info__bloks {
 	display: flex;
 	max-width: 300px;
-	padding-top: 50px;
+	padding-top: 41px;
 	padding-bottom: 10px;
 	border-bottom: 1px solid #61594d;
 	&-descr {
@@ -26,21 +35,25 @@
 		background-repeat: no-repeat;
 		background-position-x: center;
 		margin-top: 11px;
-		padding-left: 13px;
+		padding-left: 21px;
 		padding-right: 10px;
 	}
 }
 
 .best-title {
+	@include reset-model;
 	max-width: 479px;
 	@include font-cabinet-black;
 	@include font(32px, 40px);
 	color: $color-dark-font;
+	padding-top: 20px;
 }
 
 .best-text {
-	max-width: 458px;
+	@include reset-model;
+	max-width: 466px;
 	@include font-helvetica-regular;
 	@include font(16px, 28px);
 	color: $color-dark-font;
+	padding-top: 10px;
 }
