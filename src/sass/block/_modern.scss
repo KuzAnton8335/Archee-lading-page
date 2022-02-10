@@ -9,7 +9,7 @@
 .modern-list {
 	display: flex;
 	align-items: center;
-	padding-top: 75px;
+	padding-top: 72px;
 }
 .modern-list__left {
 	width: 833px;
@@ -18,7 +18,7 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position-x: -82px;
-	background-position-y: -4px;
+	background-position-y: -2px;
 }
 
 .modern-list__right {
@@ -28,6 +28,7 @@
 }
 
 .modern-title {
+	@include reset-model;
 	font-family: "Cabinet Grotesk", sans-serif;
 	font-weight: 900;
 	font-size: 48px;
@@ -37,9 +38,11 @@
 }
 
 .modern-text {
+	@include reset-model;
 	line-height: 28px;
 	color: $color-text-base;
-	padding-bottom: 24px;
+	padding-top: 20px;
+	padding-bottom: 39px;
 }
 
 .modern-btn {
@@ -51,7 +54,7 @@
 	color: #fff;
 	font-family: "Cabinet Grotesk", sans-serif;
 	font-weight: bold;
-	@include font(16px,20px);
+	@include font(16px, 20px);
 	transition: 0.3s ease-in-out;
 }
 

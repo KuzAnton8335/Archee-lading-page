@@ -18,7 +18,11 @@
 
 	&-left {
 		max-width: 330px;
-		padding-top: 316px;
+		margin-top: auto;
+	}
+
+	&-two {
+		margin-right: 9px;
 	}
 }
 
@@ -37,6 +41,16 @@
 		content: url("../img/line-icon.svg");
 		margin-bottom: 10px;
 	}
+
+	&__three {
+		padding-left: 9px;
+		padding-bottom: 9px;
+	}
+
+	&__four {
+		padding-left: 0;
+		padding-bottom: 10px;
+	}
 }
 
 .list-text {
@@ -44,17 +58,33 @@
 	@include font(16px, 28px);
 	color: $color-text-base;
 	padding-left: 7px;
+	padding-bottom: 7px;
+
+	&__three {
+		padding-bottom: 8px;
+	}
+
+	&__four {
+		padding-left: 0;
+	}
 }
 
 .list-left__img img {
 	margin-left: 197px;
 }
 
+.list-left__img-three {
+	margin-top: 5px;
+}
 .list-revers {
 	flex-direction: row-reverse;
 }
 
 .list-right__padding {
-	padding-right: 103px;
+	margin-right: 93px;
 	padding-top: 4px;
+
+	&-four {
+		margin-right: 103px;
+	}
 }

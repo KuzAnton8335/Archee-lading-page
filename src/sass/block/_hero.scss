@@ -31,10 +31,12 @@
 .hero__text {
 	max-width: 452px;
 	font-weight: normal;
+	@include reset-model;
 	@include font(18px, 30px);
 	color: $color-text-base;
+	padding-top: 15px;
 	padding-left: 8px;
-	padding-bottom: 15px;
+	padding-bottom: 35px;
 }
 
 .hero__link {
@@ -96,7 +98,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding-top: 27px;
+	padding-top: 25px;
 	padding-left: 7px;
 	&-subtitle {
 		display: inline-block;
@@ -107,7 +109,7 @@
 
 	&-bloks {
 		display: flex;
-		padding-top: 17px;
+		padding-top: 15px;
 	}
 }
 
@@ -152,7 +154,7 @@
 	line-height: 20px;
 	text-decoration-line: underline;
 	color: $color-link;
-	padding-top: 52px;
+	padding-top: 55px;
 }
 
 .hero__phone-text {
@@ -162,5 +164,5 @@
 	font-weight: 500;
 	@include font(12px, 18px);
 	color: $color-text-base;
-	margin-top: 10px;
+	margin-top: 6px;
 }
