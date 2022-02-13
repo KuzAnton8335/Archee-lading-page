@@ -7,12 +7,14 @@
 	@include font-cabinet-black;
 	@include font(48px, 60px);
 	color: $color-dark-font;
-	padding-bottom: 50px;
-	padding-left: 7px;
+	margin-left: 7px;
+	margin-bottom: 50px;
 }
 
-.selected__list {
+.selected-list {
 	@include reset-list;
+}
+.selected__list {
 	display: flex;
 	padding-bottom: 138px;
 
@@ -73,8 +75,10 @@
 	}
 }
 
-.list-left__img img {
-	margin-left: 197px;
+.list-left__img {
+	img {
+		margin-left: 197px;
+	}
 }
 
 .list-left__img-three {
