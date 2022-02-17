@@ -7,34 +7,54 @@
 	max-width: 1289px;
 }
 .modern-list {
-	display: flex;
-	align-items: center;
-	padding-top: 72px;
+	@include bp(md) {
+		display: flex;
+		align-items: center;
+		padding-top: 72px;
+	}
 }
 .modern-list__left {
 	width: 833px;
 	height: 531px;
 	background-image: url("../img/modern-house.png");
+	background-size: 533px auto, 431px auto;
 	background-repeat: no-repeat;
-	background-size: cover;
-	background-position-x: -82px;
-	background-position-y: -2px;
+	background-position-x: 0px;
+	background-position-y: 40px;
+
+	@include bp(md) {
+		background-size: 833px auto, 531px auto;
+		background-position-x: -82px;
+		background-position-y: -2px;
+	}
 }
 
 .modern-list__right {
-	max-width: 419px;
+	max-width: 490px;
 	min-height: 440px;
-	margin-right: 52px;
+	margin-right: 0;
+	text-align: center;
+
+	@include bp(md) {
+		text-align: left;
+		margin-right: 52px;
+		max-width: 419px;
+	}
 }
 
 .modern-title {
 	@include reset-model;
 	font-family: "Cabinet Grotesk", sans-serif;
 	font-weight: 900;
-	font-size: 48px;
-	line-height: 60px;
+	@include font(38px, 50px);
 	color: $color-dark-font;
 	margin: 0;
+	text-align: center;
+
+	@include bp(md) {
+		@include font(48px, 60px);
+		padding-left: 0;
+	}
 }
 
 .modern-text {

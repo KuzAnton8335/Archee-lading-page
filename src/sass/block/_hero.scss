@@ -1,42 +1,74 @@
 .hero {
 	background-color: #f7f7f7;
 	padding-bottom: 172px;
-}
+	background-image: url("../img/3D-modern-house.png");
+	background-repeat: no-repeat, no-repeat;
+	background-position: top 205px center, top -4px left 30px;
+	background-size: 280px auto, 249px auto;
 
-.hero__wrapper {
-	position: relative;
-	&::before {
-		content: url("../img/star-combo-4.svg");
-		position: absolute;
-		left: -118px;
+	@include bp(sm) {
+		background-position: top 245px center, top 16px left 26px;
+		background-size: 500px auto, 249px auto;
 	}
-}
-.hero__info {
-	display: flex;
-	position: relative;
+
+	@include bp(md) {
+		background-position: top 80px right 0, top -4px left 30px;
+		background-size: 520px auto, 249px auto;
+		text-align: left;
+	}
+
+	@include bp(lg) {
+		background-image: url("../img/3D-modern-house.png"), url("../img/star-combo-4.svg");
+		background-position: top 145px right 0, top -4px left 30px;
+		background-size: 670px auto, 249px auto;
+		padding-top: 118px;
+	}
+
+	@include bp(xl) {
+		background-position: top 115px right -8px, top -4px left 30px;
+		background-size: 743px auto, 249px auto;
+	}
 }
 
 .hero__wrapper-title {
 	margin: 0;
-	max-width: 748px;
-	min-height: 355px;
+	max-width: 600px;
 	font-family: "Cabinet Grotesk", sans-serif;
 	font-weight: 900;
-	@include font(62px, 77px);
+	@include font(45px, 62px);
 	color: $color-dark-font;
-	padding-top: 121px;
+	padding-top: 30px;
+	padding-bottom: 180px;
 	padding-left: 7px;
+	text-align: center;
+
+	@include bp(md) {
+		@include font(62px, 77px);
+		padding-top: 0;
+		padding-bottom: 0;
+		text-align: left;
+	}
 }
 
 .hero__text {
-	max-width: 452px;
+	max-width: 370px;
 	font-weight: normal;
 	@include reset-model;
-	@include font(18px, 30px);
+	@include font(16px, 28px);
 	color: $color-text-base;
-	padding-top: 15px;
+	padding-top: 20px;
 	padding-left: 8px;
 	padding-bottom: 35px;
+	margin-left: 60px;
+
+	@include bp(xl) {
+		@include font(18px, 30px);
+	}
+
+	@include bp(md) {
+		max-width: 452px;
+		margin-left: 0;
+	}
 }
 
 .hero__link {
@@ -49,8 +81,12 @@
 	color: $color-bg-base;
 	background-color: $color-link;
 	border-radius: 6px;
-	margin-left: 7px;
+	margin-left: 130px;
 	transition: 0.3s ease-in-out;
+
+	@include bp(md) {
+		margin-left: 7px;
+	}
 
 	&:hover {
 		background-color: #f7f7f7;
@@ -58,20 +94,13 @@
 		border: 2px solid #d6680f;
 	}
 }
-.hero__wrapper-banner {
-	margin: 0;
-	max-width: 838px;
-	min-height: 600px;
-}
 
-.hero__wrapper-banner::after {
-	content: url("../img/3D-modern-house.png");
-	position: absolute;
-	top: 121px;
-	left: 560px;
-}
 .hero__raiting {
 	display: flex;
+	padding-left: 35px;
+	@include bp(md) {
+		padding-left: 0;
+	}
 	&-text {
 		font-family: "Cabinet Grotesk", sans-serif;
 		font-weight: bold;
@@ -95,16 +124,24 @@
 }
 
 .hero__avatars {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding-top: 25px;
-	padding-left: 7px;
+	padding-top: 50px;
+	padding-left: 115px;
+
+	@include bp(md) {
+		padding-top: 99px;
+		padding-left: 7px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
 	&-subtitle {
-		display: inline-block;
 		line-height: 8px;
 		letter-spacing: 0.02em;
 		color: $color-text-base;
+
+		@include bp(md) {
+			display: inline-block;
+		}
 	}
 
 	&-bloks {
@@ -125,7 +162,11 @@
 	border-radius: 50%;
 }
 .hero__avatars-item {
-	margin-right: -10px;
+	margin-right: 0;
+
+	@include bp(md) {
+		margin-right: -10px;
+	}
 }
 
 .hero__avatars-last {
@@ -154,7 +195,13 @@
 	line-height: 20px;
 	text-decoration-line: underline;
 	color: $color-link;
-	padding-top: 55px;
+	padding-top: 30px;
+	padding-left: 45px;
+
+	@include bp(md) {
+		padding-top: 55px;
+		padding-left: 0;
+	}
 }
 
 .hero__phone-text {
@@ -165,4 +212,9 @@
 	@include font(12px, 18px);
 	color: $color-text-base;
 	margin-top: 6px;
+	text-align: center;
+
+	@include bp(md) {
+		text-align: left;
+	}
 }

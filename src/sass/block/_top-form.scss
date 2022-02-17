@@ -13,11 +13,18 @@
 		@include font(24px, 30px);
 		color: $color-dark-font;
 		margin-bottom: 20px;
+		text-align: center;
+
+		@include bp(md) {
+			text-align: left;
+		}
 	}
 }
 
 .search-form {
-	display: flex;
+	@include bp(md) {
+		display: flex;
+	}
 	&__field {
 		@include reset-input;
 		@include font-helvetica-medium;
@@ -28,7 +35,14 @@
 		background-position: center right 22px;
 		padding: 18px 50px 18px 20px;
 		margin-right: 20px;
+		margin-top: 20px;
+		margin-left: 65px;
+
 		flex-grow: 1;
+		@include bp(md) {
+			margin-top: 0;
+			margin-left: 0;
+		}
 
 		&-location {
 			background-image: url("../img/location-icon.svg");
@@ -40,6 +54,10 @@
 
 		&-budget {
 			background-image: url("../img/dollar-icon.svg");
+			margin-bottom: 20px;
+			@include bp(md) {
+				margin-bottom: 0;
+			}
 		}
 
 		&::placeholder {
@@ -58,10 +76,16 @@
 	@include font(16px, 20px);
 	background-color: $color-link;
 	border-radius: 6px;
-	width: 166px;
+	width: 253px;
 	height: 60px;
 	color: #fff;
 	transition: 0.3s ease-in-out;
+	margin-left: 65px;
+
+	@include bp(md) {
+		width: 166px;
+		margin-left: 0;
+	}
 
 	&:hover {
 		background-color: #fff;

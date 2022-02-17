@@ -6,12 +6,20 @@
 
 .products__list {
 	@include reset-list;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+	@include bp(md) {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
 
 	&-item {
-		max-width: 291px;
+		max-width: 473px;
+		text-align: center;
+
+		@include bp(md) {
+			max-width: 291px;
+			text-align: left;
+		}
 	}
 }
 
@@ -34,7 +42,7 @@
 .products-link {
 	display: inline-block;
 	font-family: "Cabinet Grotesk", sans-serif;
-	@include font(16px,20px);
+	@include font(16px, 20px);
 	color: $color-text-base;
 	transition: 0.3s ease-in-out;
 	margin-top: 15px;

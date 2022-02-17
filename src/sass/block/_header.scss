@@ -2,6 +2,24 @@
 	padding-top: 33px;
 	padding-bottom: 16.22px;
 	background-color: #f7f7f7;
+
+	&__menu {
+		display: none;
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+
+		&_active {
+			display: block;
+		}
+
+		@include bp(md) {
+			display: flex;
+			align-items: center;
+		}
+	}
 }
 .header-container {
 	@include flex-center-v;
@@ -15,14 +33,29 @@
 }
 
 .nav-menu {
-	padding-bottom: 7px;
-	margin-right: -77px;
+	@include bp(md) {
+		margin-right: 100px;
+		margin-bottom: 0;
+	}
+
+	@include bp(lg) {
+		padding-bottom: 7px;
+		margin-right: 222px;
+	}
 }
 .nav-menu__list {
-	@include flex-center-v;
 	@include reset-list;
+
+	@include bp(md) {
+		@include flex-center-v;
+	}
+
 	&-item {
-		padding-right: 30px;
+		margin-bottom: 30px;
+		@include bp(md) {
+			padding-right: 30px;
+			margin-bottom: 0;
+		}
 	}
 	&-item:last-child {
 		padding-right: 0px;
@@ -30,10 +63,14 @@
 	.nav-menu__link {
 		@include reset-link;
 		font-weight: 500;
-		@include font(14px, 20px);
+		@include font(30px, 45px);
 		text-transform: uppercase;
 		color: $color-dark-font;
 		transition: 0.3s ease-in-out;
+
+		@include bp(md) {
+			@include font(14px, 20px);
+		}
 
 		&:hover {
 			text-decoration: underline;
@@ -42,7 +79,9 @@
 }
 
 .header-contact__block {
-	@include flex-center-v;
+	@include bp(md) {
+		@include flex-center-v;
+	}
 }
 .header__button {
 	&-btn {
@@ -80,15 +119,25 @@
 }
 
 .leng {
+	margin-top: 50px;
+	order: 1;
 	@include reset-list;
+
+	@include bp(md) {
+		order: 0;
+	}
 
 	&__link {
 		@include reset-link;
 		@include reset-link;
 		@include font-helvetica-medium;
-		@include font(14px, 21px);
+		@include font(30px, 45px);
 		color: $color-dark-font;
 		text-transform: uppercase;
+
+		@include bp(md) {
+			@include font(14px, 21px);
+		}
 	}
 
 	&__item {
@@ -118,7 +167,61 @@
 }
 
 .header__leng {
-	margin-top: -5px;
+	margin-top: 25px;
+	margin-bottom: 10px;
 	display: block;
 	margin-right: 28px;
+
+	@include bp(md) {
+		margin-top: 10px;
+	}
+}
+
+.header__gamb {
+	@include bp(md) {
+		display: none;
+	}
+}
+.gamb {
+	@include reset-button;
+	font-size: 0;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 25px;
+	right: 20px;
+
+	&:before {
+		display: block;
+		content: "";
+		height: 3px;
+		background-color: $color-link;
+		box-shadow: 0 10px 0 0 $color-link, 0 -10px 0 0 $color-link;
+	}
+}
+
+.menu {
+	background-color: #fff;
+	padding: 50px;
+
+	@include bp(md) {
+		background-color: transparent;
+		padding: 0;
+		position: relative;
+	}
+
+	&__close {
+		@include reset-button;
+		position: absolute;
+		top: 25px;
+		right: 20px;
+		font-size: 35px;
+
+		&:hover {
+			opacity: 0.8;
+		}
+		@include bp(md) {
+			display: none;
+		}
+	}
 }
